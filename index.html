@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohamed Boukadida - Software Quality Engineer (m/w/d) Application for WERTGARANTIE Group. 3 years of quality assurance experience with Agile Methodologies, ISTQB expertise.">
+    <meta name="keywords" content="QA Engineer, Product Assurance, Quality Assurance, Agile Methodologies, ISTQB, WERTGARANTIE Group, Mohamed Boukadida">
+    <meta name="author" content="Mohamed Boukadida">
+    <title>Mohamed Boukadida | Software Quality Engineer (m/w/d) Application - WERTGARANTIE Group</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#0EA5E9',
+                        'brand-dark': '#0284C7',
+                        'brand-light': '#38BDF8',
+                        'tech-blue-deep': '#00204A',
+                        'tech-blue-mid': '#003F7F',
+                        'tech-grey-dark': '#1A1A1A',
+                        'tech-grey-surface': '#262626',
+                        'tech-orange-accent': '#FF6B00',
+                        'tech-teal-accent': '#14B8A6',
+                        'tech-cyan-accent': '#06B6D4',
+                        'tech-text-light': '#E0E0E0',
+                        'tech-text-dark': '#333333',
+                        'tech-secondary-grey': '#f0f2f5',
+                        'tech-border-dark': '#404040',
+                        'tech-border-light': '#D1D5DB',
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Fira Code", "monospace"],
+                    },
+                },
+            },
+        };
+    </script>
+    
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #a0a0a0;
+            border-radius: 20px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #555555;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass {
+            background: rgba(26, 26, 26, 0.8);
+        }
+        .tag-cloud-item {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .tag-cloud-item:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .dark .tag-cloud-item:hover {
+            box-shadow: 0 4px 12px rgba(255,255,255,0.08);
+        }
+        .fade-transition {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .fade-out {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animated Floating Gradient Blobs */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: #ffffff;
+        }
+        
+        .dark .gradient-bg {
+            background: #0a0a0a;
+        }
+        
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.4;
+            mix-blend-mode: normal;
+        }
+        
+        .dark .gradient-blob {
+            opacity: 0.3;
+        }
+        
+        .blob-1 {
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, #8b9dc3 0%, #9b8bc3 100%);
+            top: -20%;
+            left: -20%;
+            animation: float-1 25s ease-in-out infinite;
+        }
+        
+        .blob-2 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #c38b9d 0%, #c39d8b 100%);
+            top: 40%;
+            right: -15%;
+            animation: float-2 28s ease-in-out infinite;
+        }
+        
+        .blob-3 {
+            width: 550px;
+            height: 550px;
+            background: linear-gradient(135deg, #8bb5c3 0%, #8bc3b5 100%);
+            bottom: -20%;
+            left: 20%;
+            animation: float-3 30s ease-in-out infinite;
+        }
+        
+        .blob-4 {
+            width: 450px;
+            height: 450px;
+            background: linear-gradient(135deg, #a5c38b 0%, #b5c38b 100%);
+            top: 10%;
+            right: 15%;
+            animation: float-4 26s ease-in-out infinite;
+        }
+        
+        .blob-5 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #c3b58b 0%, #c3a88b 100%);
+            bottom: 15%;
+            right: 25%;
+            animation: float-5 27s ease-in-out infinite;
+        }
+        
+        @keyframes float-1 {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(100px, 80px) rotate(90deg);
+            }
+            50% {
+                transform: translate(200px, -50px) rotate(180deg);
+            }
+            75% {
+                transform: translate(50px, 100px) rotate(270deg);
+            }
+        }
+        
+        @keyframes float-2 {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(-120px, -80px) rotate(-90deg);
+            }
+            50% {
+                transform: translate(-200px, 60px) rotate(-180deg);
+            }
+            75% {
+                transform: translate(-80px, -100px) rotate(-270deg);
+            }
+        }
+        
+        @keyframes float-3 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+            33% {
+                transform: translate(150px, -100px) scale(1.1) rotate(120deg);
+            }
+            66% {
+                transform: translate(-100px, -80px) scale(0.9) rotate(240deg);
+            }
+        }
+        
+        @keyframes float-4 {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            33% {
+                transform: translate(-100px, 120px) rotate(120deg) scale(1.05);
+            }
+            66% {
+                transform: translate(80px, -100px) rotate(240deg) scale(0.95);
+            }
+        }
+        
+        @keyframes float-5 {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            20% {
+                transform: translate(120px, -80px) rotate(72deg);
+            }
+            40% {
+                transform: translate(-80px, -120px) rotate(144deg);
+            }
+            60% {
+                transform: translate(-120px, 80px) rotate(216deg);
+            }
+            80% {
+                transform: translate(80px, 120px) rotate(288deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-tech-secondary-grey dark:bg-tech-grey-dark text-tech-text-dark dark:text-tech-text-light font-sans transition-colors duration-300">
+
+<!-- Animated Floating Gradient Blobs Background -->
+<div class="gradient-bg">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+    <div class="gradient-blob blob-3"></div>
+    <div class="gradient-blob blob-4"></div>
+    <div class="gradient-blob blob-5"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="fixed w-full z-50 glass border-b border-gray-200 dark:border-tech-border-dark transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <div class="flex-shrink-0 flex items-center">
+                <span class="font-display font-extrabold text-3xl text-brand-primary tracking-tight">QA.</span>
+                <span class="ml-2 font-semibold text-sm hidden sm:inline" data-i18n="nav.title">Candidate Profile</span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="nav.about">Overview</a>
+                <a href="#skills" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="nav.skills">Capabilities</a>
+                <a href="#experience" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="nav.experience">Experience</a>
+                <a href="#letter" class="text-sm font-medium hover:text-brand-primary transition-colors" data-i18n="nav.letter">Application</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <!-- Language Switcher -->
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 text-sm font-medium text-gray-600 dark:text-tech-text-light hover:text-brand-primary transition-colors">
+                        <span class="material-symbols-outlined text-lg">language</span>
+                        <span id="currentLang">EN</span>
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-32 bg-white dark:bg-tech-grey-surface rounded-lg shadow-lg border border-gray-100 dark:border-tech-border-dark opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right">
+                        <button class="block w-full text-left px-4 py-2 text-sm hover:bg-tech-secondary-grey dark:hover:bg-gray-800 lang-btn" data-lang="en">
+                            <span class="font-semibold">English</span>
+                        </button>
+                        <button class="block w-full text-left px-4 py-2 text-sm hover:bg-tech-secondary-grey dark:hover:bg-gray-800 lang-btn" data-lang="de">
+                            <span class="font-semibold">Deutsch</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Theme Toggle -->
+                <button class="p-2 rounded-full hover:bg-tech-secondary-grey dark:hover:bg-tech-grey-surface transition-colors text-gray-600 dark:text-tech-text-light" onclick="toggleTheme()">
+                    <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
+                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+                </button>
+                <a href="#contact" class="hidden md:inline-flex items-center px-4 py-2 bg-brand-primary text-white text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-shadow transform hover:-translate-y-0.5" data-i18n="nav.cta">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <!-- Hero Section -->
+        <section id="about" class="bg-gradient-to-br from-tech-blue-deep to-tech-blue-mid dark:from-tech-grey-surface dark:to-tech-grey-dark text-white p-6 md:p-10 rounded-2xl shadow-2xl overflow-hidden relative">
+            <div class="absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none">
+                <svg class="w-full h-full" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="text-brand-primary/50" cx="20" cy="20" fill="currentColor" r="15"></circle>
+                    <circle class="text-tech-teal-accent/50" cx="80" cy="40" fill="currentColor" r="10"></circle>
+                    <rect class="text-brand-light/50" fill="currentColor" height="10" width="10" x="50" y="70"></rect>
+                </svg>
+            </div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
+                <!-- Profile Image - Left Side on Desktop, Top on Mobile -->
+                <div class="flex-shrink-0 order-1 md:order-1 relative">
+                    <img src="cv-desk.png" alt="Mohamed Boukadida - QA Engineer" class="rounded-xl shadow-2xl w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover object-center border-4 border-white/20 scale-110">
+                    <!-- Overlay positioned on the monitor screen -->
+                    <div class="absolute top-[32%] left-[6%] w-[38%] h-[20%] flex items-center justify-center pointer-events-none">
+                        <div class="bg-gray-900/95 backdrop-blur-sm px-2 py-7.5 rounded shadow-lg w-full h-full flex items-center justify-center">
+                            <div class="text-white leading-tight text-center">
+                                <div class="text-[0.15rem] md:text-[0.7rem] lg:text-[0.45rem] font-semibold text-brand-primary uppercase tracking-wide mb-2">Target Company</div>
+                                <div class="font-display font-extrabold text-[0.8rem] md:text-[1.2rem] lg:text-[1rem] mb-2 animate-pulse">WERTGARANTIE Group</div>
+                                <div class="font-medium text-[0.4rem] md:text-[0.20rem] lg:text-[0.4rem] text-gray-300">
+                                    <span>📍 Hannover, Germany</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content - Right Side on Desktop, Bottom on Mobile -->
+                <div class="flex-1 space-y-4 text-center md:text-left order-2 md:order-2">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-white bg-opacity-20 text-white text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
+                        <span data-i18n="hero.badge">APPLICATION ID: 2025-QA-WERTGARANTIE</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-extrabold leading-tight">
+                        <span data-i18n="hero.title">Quality Assurance Engineer</span>
+                    </h1>
+                    <p class="text-sm md:text-base opacity-90 max-w-2xl mx-auto md:mx-0 leading-relaxed" data-i18n="hero.subtitle">
+                        Applying for Software Quality Engineer (m/w/d) at WERTGARANTIE Group. Bringing 3 years of engineering expertise and commitment to Agile Methodologies, ISTQB.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-2 justify-center md:justify-start">
+                        <a href="#letter" class="bg-white text-tech-blue-deep px-5 py-2.5 rounded-lg font-bold shadow-lg hover:bg-gray-100 hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                            <span class="material-symbols-outlined text-lg">description</span>
+                            <span data-i18n="hero.cta1">View Application</span>
+                        </a>
+                        <button onclick="downloadCV()" class="px-5 py-2.5 rounded-lg font-semibold border-2 border-white border-opacity-40 hover:bg-white hover:bg-opacity-10 hover:border-opacity-60 transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-lg">download</span>
+                            <span data-i18n="hero.cta2">Download CV</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-4 pt-3 text-white text-opacity-80 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/in/mohamed-boukadida/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:scale-110 transition-all" title="LinkedIn Profile">
+                            <span class="text-lg font-display">in</span>
+                        </a>
+                        <a href="mailto:boukadida.h@gmail.com" class="hover:text-white hover:scale-110 transition-all" title="Send Email">
+                            <span class="material-symbols-outlined text-xl">alternate_email</span>
+                        </a>
+                        <a href="tel:+4915211931309" class="hover:text-white hover:scale-110 transition-all" title="Call Phone">
+                            <span class="material-symbols-outlined text-xl">phone</span>
+                        </a>
+                        <a href="https://github.com/theboukadida92" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:scale-110 transition-all" title="GitHub Profile">
+                            <span class="material-symbols-outlined text-xl">code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics Section -->
+        <section id="metrics" class="bg-white dark:bg-tech-grey-surface p-8 rounded-2xl shadow-md border border-gray-100 dark:border-tech-border-dark">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1">
+                    <h3 class="text-5xl font-display font-extrabold text-tech-blue-mid">3+</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider" data-i18n="metrics.years">Years Experience</p>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-5xl font-display font-extrabold text-brand-primary">10+</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider" data-i18n="metrics.projects">QA Tools</p>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-5xl font-display font-extrabold text-tech-blue-mid">4</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider" data-i18n="metrics.languages">Languages</p>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-5xl font-display font-extrabold text-brand-primary">100%</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider" data-i18n="metrics.dedicated">Dedicated</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies Section -->
+        <section id="skills" class="bg-white dark:bg-tech-grey-surface p-8 rounded-2xl shadow-md border border-gray-100 dark:border-tech-border-dark">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-4xl font-display font-extrabold text-tech-text-dark dark:text-tech-text-light mb-4" data-i18n="skills.title">Core Competencies</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="skills.subtitle">My engineering background coupled with hands-on QA experience equips me to handle complex aerospace projects.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Audits & Inspections -->
+                <div class="bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl shadow-inner border border-gray-100 dark:border-gray-700">
+                    <div class="w-14 h-14 bg-tech-blue-mid/20 text-tech-blue-mid rounded-full flex items-center justify-center text-3xl mb-4">
+                        <span class="material-symbols-outlined">fact_check</span>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-tech-text-dark dark:text-tech-text-light mb-3" data-i18n="skills.card1.title">QA Testing & Methodologies</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm" data-i18n="skills.card1.desc">Experienced in manual and automated testing with ISTQB methodologies, including test case design, execution, and defect management across web and mobile platforms.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-tech-blue-mid text-sm rounded-full font-semibold tag-cloud-item shadow-sm">ISTQB</span>
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-tech-blue-mid text-sm rounded-full font-semibold tag-cloud-item shadow-sm">Test Planning</span>
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-tech-blue-mid text-sm rounded-full font-semibold tag-cloud-item shadow-sm">Agile/Scrum</span>
+                    </div>
+                </div>
+                
+                <!-- ESA-ECSS Standards -->
+                <div class="bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl shadow-inner border border-gray-100 dark:border-gray-700">
+                    <div class="w-14 h-14 bg-brand-primary/20 text-brand-primary rounded-full flex items-center justify-center text-3xl mb-4">
+                        <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-tech-text-dark dark:text-tech-text-light mb-3" data-i18n="skills.card2.title">Test Automation & CI/CD</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm" data-i18n="skills.card2.desc">Proficient in building automated test frameworks with Cypress, Selenium, and integrating tests into CI/CD pipelines with Jenkins for continuous quality assurance.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-brand-primary text-sm rounded-full font-semibold tag-cloud-item shadow-sm">Cypress</span>
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-brand-primary text-sm rounded-full font-semibold tag-cloud-item shadow-sm">Selenium</span>
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-brand-primary text-sm rounded-full font-semibold tag-cloud-item shadow-sm">Jenkins</span>
+                    </div>
+                </div>
+                
+                <!-- Communication -->
+                <div class="bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl shadow-inner border border-gray-100 dark:border-gray-700">
+                    <div class="w-14 h-14 bg-tech-teal-accent/20 text-tech-teal-accent rounded-full flex items-center justify-center text-3xl mb-4">
+                        <span class="material-symbols-outlined">translate</span>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-tech-text-dark dark:text-tech-text-light mb-3" data-i18n="skills.card3.title">Multilingual Communication</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm" data-i18n="skills.card3.desc">Proficient in German, English, French, and Arabic, enabling effective communication within multinational teams.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-tech-teal-accent text-sm rounded-full font-semibold tag-cloud-item shadow-sm">German (B2)</span>
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-tech-teal-accent text-sm rounded-full font-semibold tag-cloud-item shadow-sm">English</span>
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-tech-teal-accent text-sm rounded-full font-semibold tag-cloud-item shadow-sm">French</span>
+                        <span class="px-4 py-2 bg-white dark:bg-gray-800 text-tech-teal-accent text-sm rounded-full font-semibold tag-cloud-item shadow-sm">Arabic</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Technical Skills -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl border border-gray-100 dark:border-gray-700">
+                    <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-tech-blue-mid">engineering</span>
+                        <span data-i18n="skills.testing.title">Testing & Automation</span>
+                    </h4>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Cypress & Selenium</span>
+                                <span class="text-sm font-semibold text-tech-blue-mid">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-tech-blue-mid to-brand-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Postman & Rest Assured</span>
+                                <span class="text-sm font-semibold text-tech-blue-mid">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-tech-blue-mid to-brand-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">JMeter & Playwright</span>
+                                <span class="text-sm font-semibold text-tech-blue-mid">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-tech-blue-mid to-brand-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">TestNG & Cucumber</span>
+                                <span class="text-sm font-semibold text-tech-blue-mid">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-tech-blue-mid to-brand-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl border border-gray-100 dark:border-gray-700">
+                    <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-brand-primary">work</span>
+                        <span data-i18n="skills.tools.title">Management & Tools</span>
+                    </h4>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Jira & Xray</span>
+                                <span class="text-sm font-semibold text-brand-primary">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-brand-primary to-tech-cyan-accent h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Confluence & Documentation</span>
+                                <span class="text-sm font-semibold text-brand-primary">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-brand-primary to-tech-cyan-accent h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Git & GitHub Actions</span>
+                                <span class="text-sm font-semibold text-brand-primary">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-brand-primary to-tech-cyan-accent h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">PostgreSQL & JDBC</span>
+                                <span class="text-sm font-semibold text-brand-primary">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-brand-primary to-tech-cyan-accent h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Experience Section -->
+        <section id="experience" class="bg-white dark:bg-tech-grey-surface p-8 rounded-2xl shadow-md border border-gray-100 dark:border-tech-border-dark">
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="w-full md:w-1/3">
+                    <div class="sticky top-32">
+                        <h2 class="text-4xl font-display font-extrabold text-tech-text-dark dark:text-tech-text-light mb-4" data-i18n="experience.title">Professional Journey</h2>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8" data-i18n="experience.subtitle">A track record of quality assurance excellence across diverse projects and industries.</p>
+                        <div class="mt-12 hidden md:block relative">
+                            <img src="cv-posture.png" alt="Mohamed Boukadida Professional" class="w-full h-auto object-cover rounded-2xl filter drop-shadow-xl opacity-90 hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-2/3 space-y-8">
+                    <!-- Experience 1 -->
+                    <article class="relative pl-8 border-l-4 border-brand-primary/50 pb-8">
+                        <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-brand-primary border-4 border-white dark:border-tech-grey-dark"></div>
+                        <div class="bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl shadow-sm border border-gray-100 dark:border-tech-border-dark hover:shadow-lg transition-shadow">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-display font-bold text-tech-text-dark dark:text-tech-text-light" data-i18n="experience.job1.title">QA Automation Engineer</h3>
+                                    <p class="text-brand-primary font-medium" data-i18n="experience.job1.company">Techpro Education Bootcamp</p>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-700 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit font-medium" data-i18n="experience.job1.date">09/2024 - 07/2025</span>
+                            </div>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                                <li data-i18n="experience.job1.task1">Defined and wrote functional and technical test plans in Xray for real estate platform</li>
+                                <li data-i18n="experience.job1.task2">Automated test execution with Cypress and Selenium, achieving 90% test coverage</li>
+                                <li data-i18n="experience.job1.task3">Performed API tests with Postman and designed performance tests with JMeter</li>
+                                <li data-i18n="experience.job1.task4">Integrated tests into CI/CD pipeline with Jenkins, reducing deployment time by 40%</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Experience 2 -->
+                    <article class="relative pl-8 border-l-4 border-brand-primary/50 pb-8">
+                        <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-brand-primary border-4 border-white dark:border-tech-grey-dark"></div>
+                        <div class="bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl shadow-sm border border-gray-100 dark:border-tech-border-dark hover:shadow-lg transition-shadow">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-display font-bold text-tech-text-dark dark:text-tech-text-light" data-i18n="experience.job2.title">Manual QA Tester</h3>
+                                    <p class="text-brand-primary font-medium" data-i18n="experience.job2.company">NumiSoft Solutions</p>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-700 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit font-medium" data-i18n="experience.job2.date">01/2021 - 02/2023</span>
+                            </div>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                                <li data-i18n="experience.job2.task1">Analyzed functional specifications and user stories to derive test conditions</li>
+                                <li data-i18n="experience.job2.task2">Designed and maintained comprehensive manual test cases using boundary value analysis</li>
+                                <li data-i18n="experience.job2.task3">Executed functional, regression, and smoke tests across web and mobile platforms</li>
+                                <li data-i18n="experience.job2.task4">Logged, tracked, and retested defects using Jira with clear reproduction steps</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Experience 3 -->
+                    <article class="relative pl-8 border-l-4 border-brand-primary/50">
+                        <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-brand-primary border-4 border-white dark:border-tech-grey-dark"></div>
+                        <div class="bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl shadow-sm border border-gray-100 dark:border-tech-border-dark hover:shadow-lg transition-shadow">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-display font-bold text-tech-text-dark dark:text-tech-text-light" data-i18n="experience.job3.title">Project Planning Engineer</h3>
+                                    <p class="text-brand-primary font-medium" data-i18n="experience.job3.company">Dräxlmaier Group</p>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-700 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit font-medium" data-i18n="experience.job3.date">01/2020 - 07/2020</span>
+                            </div>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                                <li data-i18n="experience.job3.task1">Managed planning of Land Rover L460 production line integration project</li>
+                                <li data-i18n="experience.job3.task2">Verified project progress against milestones and production requirements</li>
+                                <li data-i18n="experience.job3.task3">Conducted risk analyses and implemented corrective measures</li>
+                                <li data-i18n="experience.job3.task4">Developed daily and weekly task plans with Primavera P6</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Vision/Quote Section -->
+        <section id="vision" class="bg-gradient-to-br from-brand-primary to-brand-dark dark:from-tech-grey-surface dark:to-tech-grey-dark text-white p-8 md:p-12 rounded-2xl shadow-xl text-center">
+            <div class="max-w-4xl mx-auto">
+                <span class="material-symbols-outlined text-6xl opacity-20 mb-4">format_quote</span>
+                <blockquote class="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight" data-i18n="vision.quote">
+                    I am impressed by WERTGARANTIE Group's commitment to sustainability through its 'Repair instead of Discard' mission and its focus on employee well-being, offering a supportive environment for professional growth and social engagement.
+                </blockquote>
+                <p class="text-lg opacity-90 mb-8 leading-relaxed" data-i18n="vision.text">
+                    I am eager to contribute my skills and knowledge to your team and help drive the success of your projects. 
+                    I am committed to ensuring compliance with industry regulations in all project deliverables.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-6 py-2 bg-white bg-opacity-20 rounded-full text-sm font-semibold" data-i18n="vision.tag1">Innovation</span>
+                    <span class="px-6 py-2 bg-white bg-opacity-20 rounded-full text-sm font-semibold" data-i18n="vision.tag2">Precision</span>
+                    <span class="px-6 py-2 bg-white bg-opacity-20 rounded-full text-sm font-semibold" data-i18n="vision.tag3">Compliance</span>
+                    <span class="px-6 py-2 bg-white bg-opacity-20 rounded-full text-sm font-semibold" data-i18n="vision.tag4">Excellence</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover Letter Section -->
+        <section id="letter" class="bg-white dark:bg-tech-grey-surface p-8 rounded-2xl shadow-md border border-gray-100 dark:border-tech-border-dark">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-4xl font-display font-extrabold text-tech-text-dark dark:text-tech-text-light mb-4" data-i18n="letter.title">Cover Letter Analysis</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="letter.subtitle">Why I'm the perfect fit for this role at WERTGARANTIE Group</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Applicant Details Sidebar -->
+                    <aside class="md:col-span-1 bg-tech-secondary-grey dark:bg-tech-grey-dark p-6 rounded-xl border border-gray-100 dark:border-gray-700 h-fit">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4" data-i18n="letter.details.title">Applicant Details</h3>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-brand-primary">person</span>
+                                <div>
+                                    <p class="font-semibold">Mohamed Boukadida</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">QA Consultant</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-brand-primary">location_on</span>
+                                <p class="text-sm">Wolfsburg, 38440, Germany</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-brand-primary">email</span>
+                                <p class="text-sm">Boukadida.h@gmail.com</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-brand-primary">phone</span>
+                                <p class="text-sm">+49 152 1193 1309</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-brand-primary/10 border-l-4 border-brand-primary p-4 rounded">
+                            <p class="text-xs font-bold uppercase tracking-wider text-brand-primary mb-1" data-i18n="letter.role.label">ROLE</p>
+                            <p class="font-bold text-lg">Software Quality Engineer (m/w/d)</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Ref: Job Post 03/15/2025</p>
+                        </div>
+                    </aside>
+                    
+                    <!-- Cover Letter Content -->
+                    <article class="md:col-span-2 space-y-6">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed" data-i18n="letter.p1">
+                            <em>"I am writing to express my interest in the Software Quality Engineer (m/w/d) position at WERTGARANTIE Group as advertised."</em>
+                        </p>
+                        
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed" data-i18n="letter.p2">
+                            With a strong background in engineering and hands-on experience in quality/product assurance tasks, 
+                            I am excited about the opportunity to contribute to your team and support the innovative projects at WERTGARANTIE Group.
+                        </p>
+                        
+                        <div class="bg-brand-primary/5 border-l-4 border-brand-primary p-6 rounded-lg">
+                            <h4 class="font-bold text-brand-primary mb-3 text-lg" data-i18n="letter.highlight.title">Why Me?</h4>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed" data-i18n="letter.highlight.text">
+                                My experience aligns perfectly with your requirements for manual and automated testing of Drupal websites and CI/CD integration. I bring proven expertise in Cypress, Selenium, and JIRA Xray, having achieved 90% test coverage and reduced deployment time by 40%. I am eager to apply my skills in functional, integration, and performance testing to ensure the quality of your sustainable web projects.
+                            </p>
+                        </div>
+                        
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed" data-i18n="letter.p3">
+                            I have successfully achieved 90% test coverage through automated testing, reduced deployment time by 40% via CI/CD integration, and designed comprehensive test plans for web platforms—skills directly applicable to software quality engineering. My engineering background provides a structured, analytical approach to quality assurance, which is essential for complex web projects like your Drupal sites. Furthermore, my proficiency in German (B2) and English (fluent) enables seamless collaboration with international teams and clients. I am well-versed in Cypress, Selenium, Xray, and Agile methodologies—all critical aspects of the Software Quality Engineer role at WERTGARANTIE Group.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/CTA Section -->
+        <section id="contact" class="bg-gradient-to-br from-tech-blue-deep to-tech-blue-mid dark:from-tech-grey-surface dark:to-tech-grey-dark text-white p-8 md:p-12 rounded-2xl shadow-xl text-center">
+            <h2 class="text-4xl font-display font-extrabold mb-6" data-i18n="contact.title">Ready to Discuss?</h2>
+            <p class="text-lg opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed" data-i18n="contact.subtitle">
+                I'm committed to delivering quality and precision in every project. Let's discuss how I can contribute to WERTGARANTIE Group's success.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="downloadCV()" class="bg-brand-primary text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-opacity-90 transition-colors text-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">download</span>
+                    <span data-i18n="contact.cta1">Download Full CV</span>
+                </button>
+                <a href="mailto:Boukadida.h@gmail.com" class="px-8 py-3 rounded-xl font-semibold border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10 transition-colors text-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">email</span>
+                    <span data-i18n="contact.cta2">Send Email</span>
+                </a>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+
+<!-- Footer -->
+<footer class="bg-white dark:bg-tech-grey-surface border-t border-gray-200 dark:border-tech-border-dark py-12 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <span class="font-display font-extrabold text-3xl text-brand-primary tracking-tight">QA.</span>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">© 2025 Mohamed Boukadida. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-gray-500 dark:text-gray-400">
+                <a href="https://www.linkedin.com/in/mohamed-boukadida/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-primary transition-colors">LinkedIn</a>
+                <a href="https://github.com/theboukadida92" target="_blank" rel="noopener noreferrer" class="hover:text-brand-primary transition-colors">GitHub</a>
+                <a href="mailto:Boukadida.h@gmail.com" class="hover:text-brand-primary transition-colors">Email</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Translations Object
+    const translations = {
+        en: {
+            nav: {
+                title: "Candidate Profile",
+                about: "Overview",
+                skills: "Capabilities",
+                experience: "Experience",
+                letter: "Application",
+                cta: "Contact Me"
+            },
+            hero: {
+                badge: "APPLICATION ID: 2025-QA-WERTGARANTIE",
+                title: "Quality Assurance Engineer",
+                subtitle: "Applying for Software Quality Engineer (m/w/d) at WERTGARANTIE Group. Bringing 3 years of engineering expertise and commitment to Agile Methodologies, ISTQB.",
+                cta1: "View Application",
+                cta2: "Download CV"
+            },
+            metrics: {
+                years: "Years Experience",
+                projects: "QA Tools",
+                languages: "Languages",
+                dedicated: "Dedicated"
+            },
+            skills: {
+                title: "Core Competencies",
+                subtitle: "My engineering background coupled with hands-on QA experience equips me to handle complex software testing projects.",
+                card1: {
+                    title: "QA Testing & Methodologies",
+                    desc: "Experienced in manual and automated testing with ISTQB methodologies, including test case design, execution, and defect management across web and mobile platforms."
+                },
+                card2: {
+                    title: "Test Automation & CI/CD",
+                    desc: "Proficient in building automated test frameworks with Cypress, Selenium, and integrating tests into CI/CD pipelines with Jenkins for continuous quality assurance."
+                },
+                card3: {
+                    title: "Multilingual Communication",
+                    desc: "Proficient in German, English, French, and Arabic, enabling effective communication within multinational teams."
+                },
+                testing: {
+                    title: "Testing & Automation"
+                },
+                tools: {
+                    title: "Management & Tools"
+                }
+            },
+            experience: {
+                title: "Professional Journey",
+                subtitle: "A track record of quality assurance excellence across diverse projects and industries.",
+                job1: {
+                    title: "QA Automation Engineer",
+                    company: "Techpro Education Bootcamp",
+                    date: "09/2024 - 07/2025",
+                    task1: "Defined and wrote functional and technical test plans in Xray for real estate platform",
+                    task2: "Automated test execution with Cypress and Selenium, achieving 90% test coverage",
+                    task3: "Performed API tests with Postman and designed performance tests with JMeter",
+                    task4: "Integrated tests into CI/CD pipeline with Jenkins, reducing deployment time by 40%"
+                },
+                job2: {
+                    title: "Manual QA Tester",
+                    company: "NumiSoft Solutions",
+                    date: "01/2021 - 02/2023",
+                    task1: "Analyzed functional specifications and user stories to derive test conditions",
+                    task2: "Designed and maintained comprehensive manual test cases using boundary value analysis",
+                    task3: "Executed functional, regression, and smoke tests across web and mobile platforms",
+                    task4: "Logged, tracked, and retested defects using Jira with clear reproduction steps"
+                },
+                job3: {
+                    title: "Project Planning Engineer",
+                    company: "Dräxlmaier Group",
+                    date: "01/2020 - 07/2020",
+                    task1: "Managed planning of Land Rover L460 production line integration project",
+                    task2: "Verified project progress against milestones and production requirements",
+                    task3: "Conducted risk analyses and implemented corrective measures",
+                    task4: "Developed daily and weekly task plans with Primavera P6"
+                }
+            },
+            vision: {
+                quote: "I am impressed by WERTGARANTIE Group's commitment to sustainability through its 'Repair instead of Discard' mission and its focus on employee well-being, offering a supportive environment for professional growth and social engagement.",
+                text: "I am eager to contribute my skills and knowledge to your team and help drive the success of your projects. I am committed to ensuring compliance with industry regulations in all project deliverables.",
+                tag1: "Innovation",
+                tag2: "Precision",
+                tag3: "Compliance",
+                tag4: "Excellence"
+            },
+            letter: {
+                title: "Cover Letter Analysis",
+                subtitle: "Why I'm the perfect fit for this role at WERTGARANTIE Group",
+                details: {
+                    title: "Applicant Details"
+                },
+                role: {
+                    label: "ROLE"
+                },
+                p1: "<em>\"I am writing to express my interest in the Software Quality Engineer (m/w/d) position at WERTGARANTIE Group as advertised.\"</em>",
+                p2: "With a strong background in engineering and hands-on experience in quality/product assurance tasks, I am excited about the opportunity to contribute to your team and support the innovative projects at WERTGARANTIE Group.",
+                highlight: {
+                    title: "Why Me?",
+                    text: "My experience aligns perfectly with your requirements for manual and automated testing of Drupal websites and CI/CD integration. I bring proven expertise in Cypress, Selenium, and JIRA Xray, having achieved 90% test coverage and reduced deployment time by 40%. I am eager to apply my skills in functional, integration, and performance testing to ensure the quality of your sustainable web projects."
+                },
+                p3: "I have successfully achieved 90% test coverage through automated testing, reduced deployment time by 40% via CI/CD integration, and designed comprehensive test plans for web platforms—skills directly applicable to software quality engineering. My engineering background provides a structured, analytical approach to quality assurance, which is essential for complex web projects like your Drupal sites. Furthermore, my proficiency in German (B2) and English (fluent) enables seamless collaboration with international teams and clients. I am well-versed in Cypress, Selenium, Xray, and Agile methodologies—all critical aspects of the Software Quality Engineer role at WERTGARANTIE Group."
+            },
+            contact: {
+                title: "Ready to Discuss?",
+                subtitle: "I'm committed to delivering quality and precision in every project. Let's discuss how I can contribute to WERTGARANTIE Group's success.",
+                cta1: "Download Full CV",
+                cta2: "Send Email"
+            }
+        },
+        de: {
+            nav: {
+                title: "Kandidatenprofil",
+                about: "Überblick",
+                skills: "Fähigkeiten",
+                experience: "Erfahrung",
+                letter: "Bewerbung",
+                cta: "Kontakt"
+            },
+            hero: {
+                badge: "BEWERBUNGS-ID: 2025-QA-WERTGARANTIE",
+                title: "Qualitätssicherungsingenieur",
+                subtitle: "Bewerbung für Software Quality Engineer (m/w/d) bei WERTGARANTIE Group. Mit 3 Jahren Ingenieurserfahrung und Engagement für Agile Methodologies, ISTQB.",
+                cta1: "Bewerbung ansehen",
+                cta2: "Lebenslauf herunterladen"
+            },
+            metrics: {
+                years: "Jahre Erfahrung",
+                projects: "QA-Tools",
+                languages: "Sprachen",
+                dedicated: "Engagiert"
+            },
+            skills: {
+                title: "Kernkompetenzen",
+                subtitle: "Mein ingenieurwissenschaftlicher Hintergrund gepaart mit praktischer QA-Erfahrung befähigt mich, komplexe Softwaretestprojekte zu bewältigen.",
+                card1: {
+                    title: "QA-Tests & Methoden",
+                    desc: "Erfahren in manuellen und automatisierten Tests mit ISTQB-Methoden, einschließlich Testfallerstellung, Ausführung und Fehlermanagement auf Web- und Mobile-Plattformen."
+                },
+                card2: {
+                    title: "Testautomatisierung & CI/CD",
+                    desc: "Kompetent im Aufbau automatisierter Test-Frameworks mit Cypress, Selenium und Integration von Tests in CI/CD-Pipelines mit Jenkins für kontinuierliche Qualitätssicherung."
+                },
+                card3: {
+                    title: "Mehrsprachige Kommunikation",
+                    desc: "Beherrschung von Deutsch, Englisch, Französisch und Arabisch, was eine effektive Kommunikation in multinationalen Teams ermöglicht."
+                },
+                testing: {
+                    title: "Testen & Automatisierung"
+                },
+                tools: {
+                    title: "Management & Tools"
+                }
+            },
+            experience: {
+                title: "Beruflicher Werdegang",
+                subtitle: "Eine Erfolgsbilanz der Qualitätssicherungsexzellenz in verschiedenen Projekten und Branchen.",
+                job1: {
+                    title: "QA-Automatisierungsingenieur",
+                    company: "Techpro Education Bootcamp",
+                    date: "09/2024 - 07/2025",
+                    task1: "Definition und Erstellung von funktionalen und technischen Prüfplänen in Xray für Immobilienplattform",
+                    task2: "Automatisierte Testausführung mit Cypress und Selenium, Erreichung von 90% Testabdeckung",
+                    task3: "Durchführung von API-Tests mit Postman und Konzeption von Performance-Tests mit JMeter",
+                    task4: "Integration von Tests in die CI/CD-Pipeline mit Jenkins, Reduzierung der Bereitstellungszeit um 40%"
+                },
+                job2: {
+                    title: "Manual Tester",
+                    company: "NumiSoft Solutions",
+                    date: "01/2021 - 02/2023",
+                    task1: "Analyse funktionaler Spezifikationen und User Stories zur Ableitung von Testbedingungen",
+                    task2: "Erstellung und Pflege umfassender manueller Testfälle mittels Grenzwertanalyse",
+                    task3: "Durchführung funktionaler, regressiver und Smoke-Tests auf Web- und Mobile-Plattformen",
+                    task4: "Erfassung, Nachverfolgung und Retests von Fehlern in Jira mit klaren Reproduktionsschritten"
+                },
+                job3: {
+                    title: "Projektingenieur",
+                    company: "Dräxlmaier-Gruppe",
+                    date: "01/2020 - 07/2020",
+                    task1: "Management der Planung des Land Rover L460 Produktionslinien-Integrationsprojekts",
+                    task2: "Überprüfung des Projektfortschritts anhand von Meilensteinen und Produktionsanforderungen",
+                    task3: "Durchführung von Risikoanalysen und Umsetzung von Korrekturmaßnahmen",
+                    task4: "Entwicklung von Tages- und Wochenplänen mit Primavera P6"
+                }
+            },
+            vision: {
+                quote: "Ich bin beeindruckt vom Engagement der WERTGARANTIE Group für Nachhaltigkeit durch die Mission 'Reparieren statt Wegwerfen' und den Fokus auf das Wohlbefinden der Mitarbeitenden, die ein unterstützendes Umfeld für berufliches Wachstum und soziales Engagement bietet.",
+                text: "Ich bin bestrebt, meine Fähigkeiten und mein Wissen in Ihr Team einzubringen und zum Erfolg Ihrer Projekte beizutragen. Ich verpflichte mich, die Einhaltung von Branchenvorschriften in allen Projektlieferungen sicherzustellen.",
+                tag1: "Innovation",
+                tag2: "Präzision",
+                tag3: "Compliance",
+                tag4: "Exzellenz"
+            },
+            letter: {
+                title: "Anschreiben-Analyse",
+                subtitle: "Warum ich perfekt für diese Rolle bei WERTGARANTIE Group bin",
+                details: {
+                    title: "Bewerberdaten"
+                },
+                role: {
+                    label: "ROLLE"
+                },
+                p1: "<em>\"Hiermit möchte ich mein Interesse an der Position als Software Quality Engineer (m/w/d) bei WERTGARANTIE Group zum Ausdruck bringen.\"</em>",
+                p2: "Mit einem soliden ingenieurwissenschaftlichen Hintergrund und praktischer Erfahrung in Qualitäts-/Produktsicherungsaufgaben freue ich mich auf die Möglichkeit, zu Ihrem Team beizutragen und die innovativen Projekte bei WERTGARANTIE Group zu unterstützen.",
+                highlight: {
+                    title: "Warum ich?",
+                    text: "Meine Erfahrung entspricht perfekt Ihren Anforderungen an manuelle und automatisierte Tests für Drupal-Websites und CI/CD-Integration. Ich bringe nachgewiesene Expertise in Cypress, Selenium und JIRA Xray mit, habe 90% Testabdeckung erreicht und die Bereitstellungszeit um 40% reduziert. Ich bin motiviert, meine Kenntnisse in funktionalen, Integrations- und Performance-Tests einzusetzen, um die Qualität Ihrer nachhaltigen Webprojekte sicherzustellen."
+                },
+                p3: "Ich habe erfolgreich 90% Testabdeckung durch automatisierte Tests erreicht, die Bereitstellungszeit um 40% durch CI/CD-Integration reduziert und umfassende Testpläne für Web-Plattformen entwickelt—Fähigkeiten, die direkt auf Software Quality Engineering anwendbar sind. Mein ingenieurwissenschaftlicher Hintergrund bietet einen strukturierten, analytischen Ansatz zur Qualitätssicherung, der für komplexe Webprojekte wie Ihre Drupal-Seiten unerlässlich ist. Darüber hinaus ermöglichen mir meine Deutschkenntnisse (B2) und Englischkenntnisse (fließend) eine nahtlose Zusammenarbeit mit internationalen Teams und Kunden. Ich bin versiert in Cypress, Selenium, Xray und Agile-Methoden—alles kritische Aspekte der Rolle als Software Quality Engineer bei der WERTGARANTIE Group."
+            },
+            contact: {
+                title: "Bereit zum Gespräch?",
+                subtitle: "Ich bin verpflichtet, Qualität und Präzision in jedem Projekt zu liefern. Lassen Sie uns besprechen, wie ich zum Erfolg von WERTGARANTIE Group beitragen kann.",
+                cta1: "Vollständigen Lebenslauf herunterladen",
+                cta2: "E-Mail senden"
+            }
+        }
+    };
+
+    // Language Switcher
+    let currentLang = localStorage.getItem('language') || 'en';
+    
+    function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        document.getElementById('currentLang').textContent = lang.toUpperCase();
+        
+        // Add fade out effect
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            el.classList.add('fade-out');
+        });
+        
+        // Wait for fade out, then update text and fade in
+        setTimeout(() => {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let value = translations[lang];
+                
+                keys.forEach(k => {
+                    value = value[k];
+                });
+                
+                if (value) {
+                    el.innerHTML = value;
+                }
+            });
+            
+            // Remove fade out and trigger fade in
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.classList.remove('fade-out');
+            });
+        }, 300);
+    }
+
+    // Initialize language
+    setLanguage(currentLang);
+
+    // Language button listeners
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
+
+
+    // Theme Toggle
+    function toggleTheme() {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    }
+
+    // Check local storage on load
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+
+    // Download CV Function
+    function downloadCV() {
+        // CV URLs - Direct download from GitHub
+        const cvUrls = {
+            en: 'https://raw.githubusercontent.com/theboukadida92/theboukadida92/dev/TECHNICAL%20FILE%20Mohamed%20boukadida%20v2.pdf',
+            de: 'https://raw.githubusercontent.com/theboukadida92/theboukadida92/dev/TECHNISCHES%20DOSSIER%20Mohamed%20boukadida%20v2.pdf'
+        };
+        
+        // Get current language
+        const lang = currentLang || 'en';
+        const cvUrl = cvUrls[lang];
+        
+        // Create temporary link and trigger download
+        const link = document.createElement('a');
+        link.href = cvUrl;
+        link.download = lang === 'de' ? 'Mohamed_Boukadida_CV_DE.pdf' : 'Mohamed_Boukadida_CV_EN.pdf';
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+  
+</script>
+
+</body>
+</html>
